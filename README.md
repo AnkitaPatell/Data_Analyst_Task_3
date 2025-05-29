@@ -34,7 +34,7 @@ This project demonstrates how to extract and analyze data from a relational data
 
 ## Steps:
 1. Load the dataset into your SQL engine (PostgreSQL).
-2. Open `analysis_queries.sql` in your SQL editor.
+2. Open `SQL_queries.sql` in your SQL editor.
 3. Run queries section by section to view results.
 4. Use the screenshots for reference and validation.
 
