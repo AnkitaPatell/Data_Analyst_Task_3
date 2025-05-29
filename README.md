@@ -29,8 +29,7 @@ This project demonstrates how to extract and analyze data from a relational data
 ### Query Optimization
 - Created indexes to improve performance on frequently filtered/joined columns
 
-## Screenshots of SQL outputs are included in the repository, showcasing the results of key queries.
-
+Screenshots of SQL outputs are included in the repository, showcasing the results of key queries.
 
 ## Steps:
 1. Load the dataset into your SQL engine (PostgreSQL).
