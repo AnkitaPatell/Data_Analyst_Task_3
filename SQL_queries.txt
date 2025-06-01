@@ -1,12 +1,19 @@
 -- SQL queries
 
+--SELECT
 Select * from categories;
 
+--WHERE
 Select * from payment where amount < 80;
 
+-- COUNT
 Select count(*) from payment where amount < 800;
 
+--ORDER BY
 Select distinct(state), pin_code from address order by pin_code;
+
+--GROUP BY
+Select count(*), payment_method from payment group by payment_method
 
 -- INNER JOIN 
 Returns only users who have placed at least one order.
@@ -26,11 +33,16 @@ FROM reviews r
 RIGHT JOIN product p ON r.product_id = p.product_id
 LEFT JOIN users u ON r.user_id = u.user_id;
 
+-- SUBQUERY
+SELECT user_name, email FROM users WHERE user_id IN (SELECT user_id FROM orders);
+
+--AGGREGATE FUNCTIONS
 SELECT SUM(amount) AS total_payment FROM payment;
 
 SELECT AVG(amount) AS average_payment FROM payment;
- 
-CREATE VIEW product_review_summary AS
+
+--VIEW
+ CREATE VIEW product_review_summary AS
 SELECT 
     p.product_id,
     p.product_name,
@@ -40,5 +52,6 @@ FROM product p
 LEFT JOIN reviews r ON p.product_id = r.product_id
 GROUP BY p.product_id, p.product_name;
 
+-- INDEX
 Index on user_id in orders:
 CREATE INDEX idx_orders_user_id ON orders(user_id);
